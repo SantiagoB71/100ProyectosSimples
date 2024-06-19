@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-size: 10px;
+}
+
+.navegacion {
+  transform: translateY(-99%);
+  animation-name: mostrar;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  transition: 1000ms;
+  cursor: pointer;
+}
+.navegacion:hover{
+  transform: translateY(0%);
+}
+.menu li {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1.5rem;
+  transition: 300ms;
+  background-color: rgb(240, 248, 255);
+}
+.menu li:hover{
+  background-color: rgb(79, 153, 219);
+}
