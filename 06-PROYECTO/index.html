@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,11 +21,35 @@
 
             <form action="" class="main__form">
                 <div class="form__slider">
-                    
+                    <div class="slider__title">
+                        <span class="slider__text">Longitud</span>
+                        <span class="slider__number">4</span>
+                    </div>
+                    <input type="range" name="rango" class="slider__range" value="4" min="4" max="10">
+                </div>
+
+                <div class="form__control">
+                    <input type="checkbox" name="letter" class="control__checkbox" id="letters">
+                    <label for="letters" class="control__label">Con Letras</label>
                 </div>
                 <div class="form__control">
-
+                    <input type="checkbox" name="numbers" class="control__checkbox" id="numbers">
+                    <label for="numbers" class="control__label">Con Numeros</label>
                 </div>
+                <div class="form__control">
+                    <input type="checkbox" name="sym" class="control__checkbox" id="sym">
+                    <label for="sym" class="control__label">Con Simbolos</label>
+                </div>
+                <div class="form__control">
+                    <input type="checkbox" name="mayus" class="control__checkbox" id="mayus">
+                    <label for="mayus" class="control__label">Con Mayusculas</label>
+                </div>
+                
+                <div class="form__control">
+                    <input type="text" name="" id="" class="control__input" placeholder="Personalizado">
+                </div>
+
+                <input type="submit" value="Crear" class="form__submit">
             </form>
         </main>
     </div>
