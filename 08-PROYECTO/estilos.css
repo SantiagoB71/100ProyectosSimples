@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-principal:#e17171;
+}
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+
+}
+
+.layout{
+    width: 100%;
+    height: 100%;
+    background-color: #ECF2F7;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.layout__main{
+    min-width: 93rem;
+}
+.main__title{
+    font-size: 2.2rem;
+    color:var(--color-principal) ;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.main__prices{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.prices__price{
+    flex-basis: 33%;
+    background-color: white;
+    padding: 4rem;
+    text-align: center;
+    margin-right: 1.5rem;
+    border-radius: 1.5rem 0 0 1.5rem;
+}
+.prices__price:last-child{
+    border-radius:  0 1.5rem 1.5rem 0;
+}
+.prices__price--zoom{
+    transform: scale(1.1);
+    background-color: var(--color-principal);
+    border-radius: 1.5rem;
+}
+
+.prices__price--zoom .price__subtitle,
+.prices__price--zoom .price__number,
+.prices__price--zoom .price__detail{
+    color: white;
+}
+.prices__price--zoom .price__btn{
+    color: var(--color-principal);
+    background-color: white;
+    border: 1px solid transparent;
+    transition: all 300ms linear;
+}
+.prices__price--zoom .price__btn:hover{
+    color: white;
+    background-color: #d7868696;
+    border: 2px solid #da9393;
+}
+
+.price__subtitle{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #777aa2;
+
+}
+
+.price__number{
+    color: #4f5166;
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+}
+
+.price__detail {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #777aa2;
+    padding: 1rem ;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+}
+.price__detail:nth-child(4){
+    border:none;
+}
+.price__btn{
+    width: 100%;
+    margin-top: 3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--color-principal);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding:0.7rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    transition: all 300ms ease-in-out;
+}
+.price__btn:hover{
+    border: 1px solid #da9393;
+    background-color: transparent;
+    color: #e17171;
+}
+.main__toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 5rem;
+}
+.toggle__label{
+    font-weight: 600rem;
+    font-size: 1.4rem;
+    color: #4f5166;
+}
+.toggle__switch{
+    display: inline-block;
+    height: 2.8rem;
+    width: 5rem;
+    position: relative;
+}
+.toggle__checkbox{
+    display: none;
+
+}
+.toggle__slider{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: all 300ms ease;
+    border-radius: 3.4rem;
+    
+}
+.toggle__slider::before{
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    background-color: white;
+    transition: all 300ms ease;
+    top: 0.4rem;
+    left: 0.4rem;
+    border-radius: 10rem;
+}
+.toggle__checkbox:checked +.toggle__slider{
+    background-color: #e17171;
+}
+.toggle__checkbox:checked +.toggle__slider::before{
+    transform: translateX(22px);
+}
