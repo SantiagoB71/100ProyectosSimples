@@ -1,1 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-principal:#404040;
+    --color-secundario:#87CC5A;
+
+    --color-font:#667286;
+}
+
+html{
+    font-size: 10px;
+}
+body{
+    font-family: "Montserrat",Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-principal);
+}
+.layout{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.layout__title{
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    margin: 3rem 0;
+}
+
+.layout__search{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.search__input{
+    width: 100%;
+    padding: 1.8rem;
+    border-radius: 1.5rem 0 0 1.5rem;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    color: var(--color-font);
+}
+.search__input::placeholder{
+    font-weight: 500;
+    color: var(--color-font);
+}
+.search__btn{
+    padding:2.2rem;
+    border-radius: 0 1.5rem  1.5rem 0;
+    border: none;
+    outline: none;
+    background-color: var(--color-secundario);
+    cursor: pointer;
+    color: white;
+}
+
+.layout__results{
+    width: 60%;
+    padding: 4.5rem;
+    border-radius: 1.5rem;
+    background-color: white;
+    gap: 4rem;
+    margin-top: 6rem;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0.6rem  2rem gray;
+}
+
+.results__result{
+    flex-basis: 30%;
+    border-right: 1px solid #ddd;
+    padding-right: 4rem;
+}
+.results__result:last-child{
+    border: none;
+    padding-right: 0;
+}
+.result__subtitle{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-principal);
+}
+.result__title{
+    color: #2d2d2d;
+    font-size: 2rem;
+}
+.layout__map{
+    width: 100%;
+}
+.map__frame{
+    width: 100%;
+    height: 55rem;
+    outline: none;
+    border: none;
+    margin-top: -5rem;
+}
